@@ -1,0 +1,7 @@
+{
+  "name": "Collectr",
+  "description": "A social media web app for displaying and sharing your collections that I made for a school coding competition",
+  "repository": "https://github.com/tman540/collectr",
+  "logo": "https://avatars1.githubusercontent.com/u/5752708?s=100",
+  "keywords": ["python", "flask"]
+}
