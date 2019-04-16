@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/../Commonwealth/.idea/Commonwealth.iml" filepath="$PROJECT_DIR$/../Commonwealth/.idea/Commonwealth.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/collectr.iml" filepath="$PROJECT_DIR$/.idea/collectr.iml" />
     </modules>
   </component>
