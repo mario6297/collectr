@@ -2,60 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fc730b01-08fb-4cca-a7e1-11315f6ac3e8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/routes.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/css/main.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/templates/credits.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/templates/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/templates/layout.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/run.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.flaskenv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/collectr.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/collectr.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/3/0338104998400f0c277277ec54dbc28d8388020d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/9/09dee526863b40e90c4bb34a51f7e4078d9b781a" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/c/3c84dcdc6bbe3d7817c49dcdc327b926fea1808a" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/b/6b5a07a517e9a3845a279675e888c81b77b9d712" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/0/b08759b2a00bbd04e3007be702a4a650f86024df" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/f/bf6a944678638f1fc5ebf16e7b1f72af0f75e3ad" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/extensions.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/settings.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/LICENSE.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Scripts/Activate.ps1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Scripts/activate" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Scripts/activate.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Scripts/deactivate.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Scripts/dotenv.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Scripts/easy_install-3.7-script.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Scripts/easy_install-3.7.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Scripts/easy_install-script.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Scripts/easy_install.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Scripts/flask.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Scripts/libcrypto-1_1.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Scripts/libssl-1_1.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Scripts/pip-script.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Scripts/pip.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Scripts/pip3-script.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Scripts/pip3.7-script.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Scripts/pip3.7.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Scripts/pip3.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Scripts/python.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Scripts/python3.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Scripts/python37.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Scripts/pythonw.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Scripts/sqlite3.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Scripts/tcl86t.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Scripts/tk86t.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Scripts/vcruntime140.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/pyvenv.cfg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/static/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/static/icon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/favicon.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/layout.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -64,12 +15,21 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/templates/layout.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="24" column="47" lean-forward="true" selection-start-line="24" selection-start-column="47" selection-end-line="24" selection-end-column="47" />
+            <state relative-caret-position="378">
+              <caret line="65" column="37" selection-start-line="65" selection-start-column="37" selection-end-line="65" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/static/css/main.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="234">
+              <caret line="9" selection-start-line="9" selection-end-line="9" />
             </state>
           </provider>
         </entry>
@@ -77,26 +37,42 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="156">
-              <caret line="6" column="8" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/config.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="26">
-              <caret line="1" column="20" selection-start-line="1" selection-start-column="19" selection-end-line="1" selection-end-column="20" />
+            <state relative-caret-position="104">
+              <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/static/css/main.css">
+        <entry file="file://$PROJECT_DIR$/config.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="146">
-              <caret line="7" column="21" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
+            <state relative-caret-position="52">
+              <caret line="2" column="26" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/static/bootstrap/css/bootstrap.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="393">
+              <caret line="154" lean-forward="true" selection-start-line="154" selection-end-line="154" />
+              <folding>
+                <element signature="e#33257#33491#2" expanded="true" />
+                <element signature="e#34390#34543#1" expanded="true" />
+                <element signature="e#34585#34819#1" expanded="true" />
+                <element signature="e#38184#38460#2" expanded="true" />
+                <element signature="e#39387#39540#1" expanded="true" />
+                <element signature="e#39582#39858#1" expanded="true" />
+                <element signature="e#74071#74258#2" expanded="true" />
+                <element signature="e#74533#74669#2" expanded="true" />
+                <element signature="e#75122#75255#2" expanded="true" />
+                <element signature="e#76953#77106#1" expanded="true" />
+                <element signature="e#91699#91929#2" expanded="true" />
+                <element signature="e#92941#93177#2" expanded="true" />
+                <element signature="e#128905#129082#2" expanded="true" />
+                <element signature="e#129137#129314#2" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -115,9 +91,16 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>Commonwealth</find>
+      <find>.ico</find>
+      <find>primary</find>
+      <find>#007bff</find>
+      <find>var(primary-bg)</find>
+      <find>1</find>
     </findStrings>
     <replaceStrings>
       <replace>Collectr</replace>
+      <replace>var(primary-bg)</replace>
+      <replace>var(--primary-bg)</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -142,17 +125,19 @@
         <option value="$PROJECT_DIR$/app/routes.py" />
         <option value="$PROJECT_DIR$/run.py" />
         <option value="$PROJECT_DIR$/app/templates/credits.html" />
+        <option value="$PROJECT_DIR$/config.py" />
+        <option value="$PROJECT_DIR$/app/static/bootstrap/css/bootstrap.css" />
+        <option value="$PROJECT_DIR$/app/templates/index.html" />
         <option value="$PROJECT_DIR$/app/templates/layout.html" />
         <option value="$PROJECT_DIR$/app/static/css/main.css" />
-        <option value="$PROJECT_DIR$/app/templates/index.html" />
-        <option value="$PROJECT_DIR$/config.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-7" />
-    <option name="width" value="974" />
-    <option name="height" value="1047" />
+    <option name="x" value="-131" />
+    <option name="y" value="-17" />
+    <option name="width" value="2560" />
+    <option name="height" value="1400" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -160,6 +145,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -182,26 +168,35 @@
               <item name="collectr" type="b2602c69:ProjectViewProjectNode" />
               <item name="collectr" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="bootstrap" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="collectr" type="b2602c69:ProjectViewProjectNode" />
+              <item name="collectr" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="bootstrap" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="collectr" type="b2602c69:ProjectViewProjectNode" />
+              <item name="collectr" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="collectr" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Commonwealth" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="collectr" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Commonwealth" type="462c0819:PsiDirectoryNode" />
               <item name="commonwealth" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="collectr" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Commonwealth" type="462c0819:PsiDirectoryNode" />
               <item name="commonwealth" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="commonwealth" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="collectr" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Commonwealth" type="462c0819:PsiDirectoryNode" />
+              <item name="commonwealth" type="462c0819:PsiDirectoryNode" />
               <item name="commonwealth" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -209,7 +204,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -226,15 +220,16 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PythonContentEntriesConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Steve\Documents\GitHub\collectr\app\templates\errors" />
-      <recent name="C:\Users\djgig\Documents\GitHub\collectr\docs" />
-      <recent name="C:\Users\djgig\Documents\GitHub\collectr" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Steve\Documents\GitHub\collectr\app" />
       <recent name="C:\Users\djgig\Documents\GitHub\collectr" />
       <recent name="C:\Users\djgig\Documents\GitHub\collectr\app" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\djgig\Documents\GitHub\collectr\app\static\bootstrap" />
+      <recent name="C:\Users\Steve\Documents\GitHub\collectr\app\templates\errors" />
+      <recent name="C:\Users\djgig\Documents\GitHub\collectr\docs" />
+      <recent name="C:\Users\djgig\Documents\GitHub\collectr" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -296,23 +291,24 @@
       <workItem from="1555337430143" duration="1223000" />
       <workItem from="1555346260101" duration="2044000" />
       <workItem from="1555348789337" duration="3340000" />
+      <workItem from="1555376207338" duration="6695000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17274000" />
+    <option name="totallyTimeSpent" value="23969000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="2576" height="1416" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.116204694" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.11685215" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="DB Browser" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32998884" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3293556" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -340,7 +336,7 @@
     <option name="version" value="1" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/collectr$run.coverage" NAME="run Coverage Results" MODIFIED="1555351674754" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/collectr$run.coverage" NAME="run Coverage Results" MODIFIED="1555384151922" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$USER_HOME$/Desktop/mlh-hackathon-flask-starter/LICENSE">
@@ -448,7 +444,7 @@
     <entry file="file://$PROJECT_DIR$/app/controllers/home.py" />
     <entry file="file://$PROJECT_DIR$/app/controllers/tutorial.py" />
     <entry file="file://$PROJECT_DIR$/app/models/user.py" />
-    <entry file="file://$PROJECT_DIR$/../Commonwealth/commonwealth/__init__.py">
+    <entry file="file://$PROJECT_DIR$/../commonwealth/commonwealth/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="546">
           <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
@@ -468,7 +464,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../Commonwealth/run.py">
+    <entry file="file://$PROJECT_DIR$/../commonwealth/run.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/run.py">
@@ -481,7 +477,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../Commonwealth/commonwealth/routes.py">
+    <entry file="file://$PROJECT_DIR$/../commonwealth/commonwealth/routes.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-684">
           <folding>
@@ -500,13 +496,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../Commonwealth/commonwealth/templates/layout.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="19" column="44" selection-end-line="112" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/credits.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="78">
@@ -514,45 +503,78 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../Commonwealth/commonwealth/static/main.css">
+    <entry file="file://$PROJECT_DIR$/../commonwealth/commonwealth/static/main.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="78">
           <caret line="3" lean-forward="true" selection-end-line="98" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../Commonwealth/commonwealth/templates/home.html">
+    <entry file="file://$PROJECT_DIR$/../commonwealth/commonwealth/templates/home.html">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret selection-end-line="3" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/static/css/main.css">
+    <entry file="file://$PROJECT_DIR$/app/static/favicon.ico">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="146">
-          <caret line="7" column="21" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
+        <state relative-caret-position="52">
+          <caret line="2" column="26" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/layout.html">
+    <entry file="file://$PROJECT_DIR$/../commonwealth/commonwealth/templates/layout.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="24" column="47" lean-forward="true" selection-start-line="24" selection-start-column="47" selection-end-line="24" selection-end-column="47" />
+        <state relative-caret-position="594">
+          <caret line="63" column="9" lean-forward="true" selection-start-line="33" selection-end-line="63" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/static/bootstrap/css/bootstrap.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="393">
+          <caret line="154" lean-forward="true" selection-start-line="154" selection-end-line="154" />
+          <folding>
+            <element signature="e#33257#33491#2" expanded="true" />
+            <element signature="e#34390#34543#1" expanded="true" />
+            <element signature="e#34585#34819#1" expanded="true" />
+            <element signature="e#38184#38460#2" expanded="true" />
+            <element signature="e#39387#39540#1" expanded="true" />
+            <element signature="e#39582#39858#1" expanded="true" />
+            <element signature="e#74071#74258#2" expanded="true" />
+            <element signature="e#74533#74669#2" expanded="true" />
+            <element signature="e#75122#75255#2" expanded="true" />
+            <element signature="e#76953#77106#1" expanded="true" />
+            <element signature="e#91699#91929#2" expanded="true" />
+            <element signature="e#92941#93177#2" expanded="true" />
+            <element signature="e#128905#129082#2" expanded="true" />
+            <element signature="e#129137#129314#2" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="6" column="8" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
+        <state relative-caret-position="104">
+          <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config.py">
+    <entry file="file://$PROJECT_DIR$/app/templates/layout.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="26">
-          <caret line="1" column="20" selection-start-line="1" selection-start-column="19" selection-end-line="1" selection-end-column="20" />
+        <state relative-caret-position="378">
+          <caret line="65" column="37" selection-start-line="65" selection-start-column="37" selection-end-line="65" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/static/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
         </state>
       </provider>
     </entry>
