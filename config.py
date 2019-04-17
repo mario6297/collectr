@@ -1,4 +1,5 @@
 config = {
     "ip": "0.0.0.0",
-    "font": "Varela Round"
+    "font": "Varela Round",
+    "logger": False
 }

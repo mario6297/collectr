@@ -12,23 +12,141 @@
     <link rel="stylesheet" href="/static/css/main.css">
     <!--  Google Font  -->
     <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
     <title>Collectr</title>
-    <style>
-        * {
-            font-family: 'Varela Round', sans-serif !important;
-        }
-
-        body {
-            background: rgb(192, 147, 214);
-            background: linear-gradient(0deg, rgba(192, 147, 214, 1) 0%, rgba(170, 147, 214, 1) 35%, rgba(89, 57, 151, 1) 100%);
-        }
-    </style>
 </head>
 <body>
 <div class="container" id="title-container">
-    <h1 class="text-lg-center display-1 text-light">Collectr</h1>
+    <!-- Enable flash messages -->
+    <!-- Dismissible came from bootstrap documentation: (https://getbootstrap.com/docs/4.0/components/alerts/#dismissing) -->
+    {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+    {% for category, message in messages %}
+    <div class="alert alert-{{ category }} alert-dismissible" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        {{ message }}
+    </div>
+    {% endfor %}
+    {% endif %}
+    {% endwith %}
+    <!--  Bubble Background  -->
+    <ul class="circles">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <!--  END BUBBLE ANIMATION  -->
+    <img src="{{ url_for('static', filename='img/icon.png') }}" alt="" width="200vmax"
+         class="img-fluid mx-auto d-block">
+    <h1 class="text-center text-light">Collectr</h1>
     <h5 class="text-md-center text-muted" id="slogan">Share &#x25BE; Discover &#x25BE; Collect</h5>
+    <div class="container text-center">
 
+    </div>
+    <form method="POST" action="" class="form-signin">
+        {{ form.hidden_tag() }}
+        <fieldset class="form-group">
+
+            {# Username #}
+            <div class="form-group col-5 mx-auto d-block">
+
+                {% if form.username.errors %}
+                {{ form.username(class="form-control form-control-lg is-invalid") }}
+                <div class="invalid-feedback">
+                    {% for error in form.username.errors %}
+                    <span>{{ error }}</span>
+                    {% endfor %}
+                </div>
+                {% else %}
+                {{ form.username(class="form-control form-control-lg", placeholder="Username") }}
+                {% endif %}
+            </div>
+
+            {# email #}
+            <div class="form-group col-5 mx-auto d-block">
+
+                {% if form.email.errors %}
+                {{ form.email(class="form-control form-control-lg is-invalid") }}
+                <div class="invalid-feedback">
+                    {% for error in form.email.errors %}
+                    <span>{{ error }}</span>
+                    {% endfor %}
+                </div>
+                {% else %}
+                {{ form.email(class="form-control form-control-lg", placeholder="Email") }}
+                {% endif %}
+            </div>
+
+
+            {# Password#}
+            <div class="form-group col-5 mx-auto d-block">
+
+                {% if form.password.errors %}
+                {{ form.password(class="form-control form-control-lg is-invalid") }}
+                <div class="invalid-feedback">
+                    {% for error in form.password.errors %}
+                    <span>{{ error }}</span>
+                    {% endfor %}
+                </div>
+                {% else %}
+                {{ form.password(class="form-control form-control-lg", placeholder="Password") }}
+                {% endif %}
+            </div>
+
+            {# Confirm Password#}
+            <div class="form-group col-5 mx-auto d-block">
+
+                {% if form.confirm_password.errors %}
+                {{ form.confirm_password(class="form-control form-control-lg is-invalid") }}
+                <div class="invalid-feedback">
+                    {% for error in form.confirm_password.errors %}
+                    <span>{{ error }}</span>
+                    {% endfor %}
+                </div>
+                {% else %}
+                {{ form.confirm_password(class="form-control form-control-lg", placeholder="Confirm Password") }}
+                {% endif %}
+            </div>
+
+            <!-- recaptcha  -->
+<!--            <div class="form-group">-->
+<!--                {% if form.recaptcha.errors %}-->
+<!--                {{ form.recaptcha(class="form-control form-control-lg is-invalid") }}-->
+<!--                <div class="invalid-feedback">-->
+<!--                    {% for error in form.recaptcha.errors %}-->
+<!--                    <span>{{ error }}</span>-->
+<!--                    {% endfor %}-->
+<!--                </div>-->
+<!--                {% else %}-->
+<!--                {{ form.recaptcha(class="form-control g-recaptcha form-control-sm") }}-->
+<!--                {% endif %}-->
+<!--            </div>-->
+        </fieldset>
+        {# Submit Button#}
+        <div class="form-group mx-auto d-block text-center">
+            {{ form.submit(class="btn btn-outline-info") }}
+        </div>
+        <div class="border-top pt-3 text-center">
+            <small class="text-muted already-have-account">
+                Already Have an Account? <a href="#">Log In</a>
+            </small>
+        </div>
+    </form>
 </div>
+<br><br>
+<footer class="blank-footer">
+    <div class="container">
+        <p class="text-muted footer-name text-center">Steve Tautonico - 2019</p>
+    </div>
+</footer>
 </body>
 </html>

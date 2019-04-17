@@ -1,8 +1,7 @@
 from flask import Flask, render_template, abort
-from flask_sqlalchemy import SQLAlchemy
 from flask_bcrypt import Bcrypt
 from flask_login import LoginManager
-from . import controllers
+from flask_sqlalchemy import SQLAlchemy
 from werkzeug.exceptions import HTTPException
 
 app = Flask(__name__)
@@ -18,25 +17,23 @@ login_manager = LoginManager(app)
 login_manager.login_view = 'login'
 login_manager.login_message_category = "info"
 
+from . import controllers
 
 def register_blueprints(app):
     """Register blueprints."""
     app.register_blueprint(controllers.home.blueprint)
     app.register_blueprint(controllers.credits.blueprint)
-    # Error Handlers
-    # app.register_blueprint(controllers.errors.blueprint)
 
 
 register_blueprints(app)
 
 
-@app.errorhandler(Exception)
-def handle_error(e):
-    code = 500
-    if isinstance(e, HTTPException):
-        code = e.code
-        print(code)
-    return render_template("error.html", code=str(code)), code
+# @app.errorhandler(Exception)
+# def handle_error(e):
+#     code = 500
+#     if isinstance(e, HTTPException):
+#         code = e.code
+#     return render_template("error.html", code=str(code)), code
 
 
 @app.route("/error/<errorcode>", methods=["GET", "POST"])
