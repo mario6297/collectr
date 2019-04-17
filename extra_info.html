@@ -1,0 +1,303 @@
+<style>
+    .demo {
+        border: 1px solid #C0C0C0;
+        border-collapse: collapse;
+        padding: 5px;
+    }
+
+    .demo th {
+        border: 1px solid #C0C0C0;
+        padding: 5px;
+        background: #F0F0F0;
+    }
+
+    .demo td {
+        border: 1px solid #C0C0C0;
+        padding: 5px;
+        background: #FFFFFF;
+    }
+</style>
+<table class="demo">
+    <caption>HTTP STATUS CODES</caption>
+    <thead>
+    <tr>
+        <th>Code</th>
+        <th>Status</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>100</td>
+        <td>Continue</td>
+    </tr>
+    <tr>
+        <td>101</td>
+        <td>Switching Protocols</td>
+    </tr>
+    <tr>
+        <td>102</td>
+        <td>Processing</td>
+    </tr>
+    <tr>
+        <td>200</td>
+        <td>OK</td>
+    </tr>
+    <tr>
+        <td>201</td>
+        <td>Created</td>
+    </tr>
+    <tr>
+        <td>202</td>
+        <td>Accepted</td>
+    </tr>
+    <tr>
+        <td>203</td>
+        <td>Non-Authoritative&nbsp;Information</td>
+    </tr>
+    <tr>
+        <td>204</td>
+        <td>No&nbsp;Content</td>
+    </tr>
+    <tr>
+        <td>&nbsp;205</td>
+        <td>Reset&nbsp;Content</td>
+    </tr>
+    <tr>
+        <td>206</td>
+        <td>Partial&nbsp;Content</td>
+    </tr>
+    <tr>
+        <td>207</td>
+        <td>Multi-Status</td>
+    </tr>
+    <tr>
+        <td>226</td>
+        <td>IM&nbsp;Used</td>
+    </tr>
+    <tr>
+        <td>300</td>
+        <td>Multiple&nbsp;Choices</td>
+    </tr>
+    <tr>
+        <td>301</td>
+        <td>Moved&nbsp;Permanently</td>
+    </tr>
+    <tr>
+        <td>302</td>
+        <td>Found</td>
+    </tr>
+    <tr>
+        <td>303</td>
+        <td>See&nbsp;Other</td>
+    </tr>
+    <tr>
+        <td>304</td>
+        <td>Not&nbsp;Modified</td>
+    </tr>
+    <tr>
+        <td>305</td>
+        <td>Use&nbsp;Proxy</td>
+    </tr>
+    <tr>
+        <td>307</td>
+        <td>Temporary&nbsp;Redirect</td>
+    </tr>
+    <tr>
+        <td>400</td>
+        <td>Bad&nbsp;Request</td>
+    </tr>
+    <tr>
+        <td>401</td>
+        <td>Unauthorized</td>
+    </tr>
+    <tr>
+        <td>402</td>
+        <td>Payment&nbsp;Required</td>
+    </tr>
+    <tr>
+        <td>403</td>
+        <td>Forbidden</td>
+    </tr>
+    <tr>
+        <td>404</td>
+        <td>Not Found</td>
+    </tr>
+    <tr>
+        <td>405</td>
+        <td>Method&nbsp;Not Allowed</td>
+    </tr>
+    <tr>
+        <td>406</td>
+        <td>Not&nbsp;Acceptable</td>
+    </tr>
+    <tr>
+        <td>407</td>
+        <td>Proxy&nbsp;Authentication Required</td>
+    </tr>
+    <tr>
+        <td>408</td>
+        <td>Request&nbsp;Timeout</td>
+    </tr>
+    <tr>
+        <td>409</td>
+        <td>Conflict</td>
+    </tr>
+    <tr>
+        <td>410</td>
+        <td>Gone</td>
+    </tr>
+    <tr>
+        <td>411</td>
+        <td>Length Required<br></td>
+    </tr>
+    <tr>
+        <td>412<br></td>
+        <td>Precondition Failed</td>
+    </tr>
+    <tr>
+        <td>413<br></td>
+        <td>Request Entity Too Large<br></td>
+    </tr>
+    <tr>
+        <td>414<br></td>
+        <td>Request URI Too Long<br></td>
+    </tr>
+    <tr>
+        <td>415<br></td>
+        <td>Unsupported Media Type<br></td>
+    </tr>
+    <tr>
+        <td>416</td>
+        <td>Requested&nbsp;Range Not Satisfiable</td>
+    </tr>
+    <tr>
+        <td>417</td>
+        <td>Expectation&nbsp;Failed</td>
+    </tr>
+    <tr>
+        <td>418</td>
+        <td>I'm&nbsp;a teapot</td>
+    </tr>
+    <tr>
+        <td>422</td>
+        <td>Unprocessable&nbsp;Entity</td>
+    </tr>
+    <tr>
+        <td>423</td>
+        <td>Locked</td>
+    </tr>
+    <tr>
+        <td>424<br></td>
+        <td>Failed&nbsp;Dependency</td>
+    </tr>
+    <tr>
+        <td>426</td>
+        <td>Upgrade&nbsp;Required</td>
+    </tr>
+    <tr>
+        <td>428</td>
+        <td>Precondition&nbsp;Required</td>
+    </tr>
+    <tr>
+        <td>429</td>
+        <td>Too&nbsp;Many Requests</td>
+    </tr>
+    <tr>
+        <td>431</td>
+        <td>Request&nbsp;Header Fields Too Large</td>
+    </tr>
+    <tr>
+        <td>449</td>
+        <td>Retry&nbsp;With</td>
+    </tr>
+    <tr>
+        <td>451</td>
+        <td>Unavailable&nbsp;For Legal Reasons</td>
+    </tr>
+    <tr>
+        <td>500</td>
+        <td>Internal&nbsp;Server Error</td>
+    </tr>
+    <tr>
+        <td>501</td>
+        <td>Not&nbsp;Implemented</td>
+    </tr>
+    <tr>
+        <td>502</td>
+        <td>Bad&nbsp;Gateway</td>
+    </tr>
+    <tr>
+        <td>503</td>
+        <td>Service&nbsp;Unavailable</td>
+    </tr>
+    <tr>
+        <td>504</td>
+        <td>Gateway&nbsp;Timeout</td>
+    </tr>
+    <tr>
+        <td>505</td>
+        <td>HTTP&nbsp;Version Not Supported</td>
+    </tr>
+    <tr>
+        <td>507</td>
+        <td>Insufficient&nbsp;Storage</td>
+    </tr>
+    <tr>
+        <td>510</td>
+        <td>Not&nbsp;Extended</td>
+    </tr>
+    <tbody>
+</table>
+
+<h1>Color Palette</h1>
+Analogous: <br> <br>
+<span style="background-color: #aa93d6; padding: 10px;">#aa93d6</span><br> <br>
+<span style="background-color: #c093d6; padding: 10px;">#c093d6</span><br> <br>
+<span style="background-color: #9493d6; padding: 10px;">#9493d6</span><br> <br>
+<span style="background-color: #e4ddf2; padding: 10px;">#e4ddf2</span><br> <br>
+<span style="background-color: #b4b4b4; padding: 10px;">#b4b4b4</span><br> <br>
+<span style="background-color: #ffffff; padding: 10px;">#ffffff</span><br> <br>
+Complementary: <br> <br>
+<span style="background-color: #aa93d6; padding: 10px;">#aa93d6</span><br> <br>
+<span style="background-color: #c093d6; padding: 10px;">#c093d6</span><br> <br>
+<span style="background-color: #bfd693; padding: 10px;">#bfd693</span><br> <br>
+Split Complementary: <br> <br>
+<span style="background-color: #aa93d6; padding: 10px;">#aa93d6</span><br> <br>
+<span style="background-color: #c093d6; padding: 10px;">#c093d6</span><br> <br>
+<span style="background-color: #d6cb93; padding: 10px;">#d6cb93</span><br> <br>
+<span style="background-color: #9dd693; padding: 10px;">#9dd693</span><br> <br>
+<span style="background-color: #b4b4b4; padding: 10px;">#b4b4b4</span><br> <br>
+<span style="background-color: #ffffff; padding: 10px;">#ffffff</span><br> <br>
+Monocromatic: <br> <br>
+<span style="background-color: #aa93d6; padding: 10px;">#aa93d6</span><br> <br>
+<span style="background-color: #593997; padding: 10px;">#593997</span><br> <br>
+<span style="background-color: #ffffff; padding: 10px;">#ffffff</span><br> <br>
+<span style="background-color: #b4b4b4; padding: 10px;">#b4b4b4</span><br> <br>
+Triadic: <br> <br>
+<span style="background-color: #aa93d6; padding: 10px;">#aa93d6</span><br> <br>
+<span style="background-color: #d6aa93; padding: 10px;">#d6aa93</span><br> <br>
+<span style="background-color: #93d6aa; padding: 10px;">#93d6aa</span><br> <br>
+Tetradic: <br> <br>
+<span style="background-color: #aa93d6; padding: 10px;">#aa93d6</span><br> <br>
+<span style="background-color: #d6939d; padding: 10px;">#d6939d</span><br> <br>
+<span style="background-color: #93d6cb; padding: 10px;">#93d6cb</span><br> <br>
+<span style="background-color: #bfd693; padding: 10px;">#bfd693</span><br> <br>
+Color Variations <br> <br>
+Hue Variation: <br> <br>
+<span style="background-color: #939dd6; padding: 10px;">#939dd6</span><br> <br>
+<span style="background-color: #9993d6; padding: 10px;">#9993d6</span><br> <br>
+<span style="background-color: #aa93d6; padding: 10px;">#aa93d6</span><br> <br>
+<span style="background-color: #bb93d6; padding: 10px;">#bb93d6</span><br> <br>
+<span style="background-color: #cb93d6; padding: 10px;">#cb93d6</span><br> <br>
+Saturation Variation: <br> <br>
+<span style="background-color: #afa2c7; padding: 10px;">#afa2c7</span><br> <br>
+<span style="background-color: #ac9acf; padding: 10px;">#ac9acf</span><br> <br>
+<span style="background-color: #aa93d6; padding: 10px;">#aa93d6</span><br> <br>
+<span style="background-color: #a88cdd; padding: 10px;">#a88cdd</span><br> <br>
+<span style="background-color: #a584e5; padding: 10px;">#a584e5</span><br> <br>
+Tint and Shade Variation: <br> <br>
+<span style="background-color: #7049ba; padding: 10px;">#7049ba</span><br> <br>
+<span style="background-color: #8d6ec8; padding: 10px;">#8d6ec8</span><br> <br>
+<span style="background-color: #aa93d6; padding: 10px;">#aa93d6</span><br> <br>
+<span style="background-color: #c7b8e4; padding: 10px;">#c7b8e4</span><br> <br>
+<span style="background-color: #e4ddf2; padding: 10px;">#e4ddf2</span><br> <br>

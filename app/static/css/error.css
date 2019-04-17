@@ -1,0 +1,36 @@
+body {
+    background-color: #aa93d6;
+}
+
+* {
+    font-family: 'Varela Round', sans-serif;
+}
+
+.page-wrap {
+    min-height: 100vh;
+}
+
+.error-message {
+    color: #f8f9fa;
+    font-size: 15vmax !important;
+    line-height: 0.8 !important;
+}
+
+.meme-text {
+    margin: 0 !important;
+    font-size: 2vmax !important;
+}
+
+.back-home {
+    font-size: 1.5vmax !important;
+    text-decoration: underline;
+    color: #ffffff !important;
+}
+
+.back-home:hover {
+    color: #593997 !important;
+}
+
+.colored-text {
+    color: #f8f9fa;
+}

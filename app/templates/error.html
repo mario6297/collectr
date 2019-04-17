@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="{{ url_for('static', filename='favicon.ico') }}" rel="shortcut icon">
+    <!--  Bootstrap CSS  -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <!--  Bootstrap JS  -->
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!--  Main Stylesheet  -->
+    <link rel="stylesheet" href="/static/css/error.css">
+    <!--  Google Font  -->
+    <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+    <title>{{ code }}</title>
+</head>
+<body>
+<div class="page-wrap d-flex flex-row align-items-center">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-12 text-center">
+                <span class="display-1 d-block error-message">{{ code }}</span>
+                <div class="mb-4 lead colored-text meme-text">(That's an Error!)</div>
+                <a href="{{ url_for('home.home') }}" class="btn btn-link back-home">Back Home</a>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
