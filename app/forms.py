@@ -33,11 +33,13 @@ class RegForm(FlaskForm):
         if user:
             raise ValidationError("That email is already taken.")
         domain = email.data.split("@")
-        if domain[1] in emails:
-            raise ValidationError("Please don't use a disposable email address.")
+        try:
+            if domain[1] in emails:
+                raise ValidationError("Please don't use a disposable email address.")
+        except Exception:
+            raise ValidationError("Please use a valid email.")
 
     def validate_password(self, password):
-        print(password.data)
         if password.data in common_passwords.passwords:
             raise ValidationError("Please use a safer password")
 

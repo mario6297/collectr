@@ -64,6 +64,8 @@ body {
     /*background: rgb(192, 147, 214);*/
     background: linear-gradient(358deg, #c093d6, #aa93d6, #593997);
     background-size: 600% 600%;
+    min-width: 100%;
+    min-height: 100%;
 
     -webkit-animation: Flow 20s linear infinite;
     -moz-animation: Flow 20s linear infinite;
@@ -120,8 +122,8 @@ body {
 }
 
 /* Background Animation */
-circles {
-    position: absolute;
+.circles {
+
     top: 0;
     left: 0;
     width: 100%;
@@ -232,6 +234,11 @@ circles {
         border-radius: 50%;
     }
 
+}
+
+#title-container {
+    height: 100%;
+    width: 100%;
 }
 
 .btn {
