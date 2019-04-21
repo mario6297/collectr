@@ -5,7 +5,7 @@
       <paths name="collectr-webserver">
         <serverdata>
           <mappings>
-            <mapping deploy="/var/www/FlaskApp/" local="$PROJECT_DIR$" web="/var/www/FlaskApp/" />
+            <mapping deploy="/collectr" local="$PROJECT_DIR$" web="/collectr" />
           </mappings>
         </serverdata>
       </paths>

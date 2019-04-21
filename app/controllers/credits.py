@@ -4,6 +4,6 @@ from flask import Blueprint, render_template
 blueprint = Blueprint('credits', __name__)
 
 
-@blueprint.route('/credits')
+@blueprint.route('/credits/')
 def credits():
-    return render_template('credits.html')
+    return render_template('credits.html', title="Credits")

@@ -3,7 +3,7 @@
   <component name="WebServers">
     <option name="servers">
       <webServer id="037e8ec5-b001-48b1-942c-53d836f2e22b" name="collectr-webserver" url="http://206.189.179.64">
-        <fileTransfer host="206.189.179.64" port="22" accessType="SFTP">
+        <fileTransfer host="206.189.179.64" port="22" rootFolder="/root" accessType="SFTP">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
           </advancedOptions>
