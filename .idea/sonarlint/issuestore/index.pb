@@ -41,3 +41,7 @@ J
 app/controllers/credits.py,d\8\d89aad5d45e2613eeac4394920086c5054457418
 H
 app/templates/error.html,8\9\8947883463b455aaa06a4e579e3eada47eb6d935
+V
+&app/static/bootstrap/css/bootstrap.css,2\1\213737115fb6138cfdbdbca72292033e49eae837
+Z
+*app/static/bootstrap/css/bootstrap.min.css,c\e\cebb5e31976596110a8d2fcc2e429df497c6a0f4

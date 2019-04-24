@@ -1,0 +1,115 @@
+{% extends "layout.html" %}
+{% block content %}
+<form method="POST" action="" class="form-signin" enctype="multipart/form-data">
+    {{ form.hidden_tag() }}
+    {{ form.csrf_token }}
+    <fieldset class="form-group updateInfo">
+        {# Username #}
+        <div class="form-group col-xs-12 col-sm-8 col-lg-12 mx-auto d-block updateInfo">
+            {% if form.username.errors %}
+            {{ form.username(class="form-control form-control-lg is-invalid") }}
+            <div class="invalid-feedback">
+                {% for error in form.username.errors %}
+                <span>{{ error }}</span>
+                {% endfor %}
+            </div>
+            {% else %}
+            {{ form.username(class="form-control form-control-lg", placeholder="Username") }}
+            {% endif %}
+        </div>
+
+        {# email #}
+        <div class="form-group col-xs-12 col-sm-8 col-lg-12 mx-auto d-block updateInfo">
+
+            {% if form.email.errors %}
+            {{ form.email(class="form-control form-control-lg is-invalid") }}
+            <div class="invalid-feedback">
+                {% for error in form.email.errors %}
+                <span>{{ error }}</span>
+                {% endfor %}
+            </div>
+            {% else %}
+            {{ form.email(class="form-control form-control-lg", placeholder="Email") }}
+            {% endif %}
+        </div>
+
+        {# first_name #}
+        <div class="form-group col-xs-12 col-sm-8 col-lg-12 mx-auto d-block updateInfo">
+
+            {% if form.first_name.errors %}
+            {{ form.first_name(class="form-control form-control-lg is-invalid") }}
+            <div class="invalid-feedback">
+                {% for error in form.first_name.errors %}
+                <span>{{ error }}</span>
+                {% endfor %}
+            </div>
+            {% else %}
+            {{ form.first_name(class="form-control form-control-lg", placeholder="First Name") }}
+            {% endif %}
+        </div>
+
+        {# last_name #}
+        <div class="form-group col-xs-12 col-sm-8 col-lg-12 mx-auto d-block updateInfo">
+
+            {% if form.last_name.errors %}
+            {{ form.last_name(class="form-control form-control-lg is-invalid") }}
+            <div class="invalid-feedback">
+                {% for error in form.last_name.errors %}
+                <span>{{ error }}</span>
+                {% endfor %}
+            </div>
+            {% else %}
+            {{ form.last_name(class="form-control form-control-lg", placeholder="Last Name") }}
+            {% endif %}
+        </div>
+
+        {# location #}
+        <div class="form-group col-xs-12 col-sm-8 col-lg-12 mx-auto d-block updateInfo">
+
+            {% if form.location.errors %}
+            {{ form.location(class="form-control form-control-lg is-invalid") }}
+            <div class="invalid-feedback">
+                {% for error in form.location.errors %}
+                <span>{{ error }}</span>
+                {% endfor %}
+            </div>
+            {% else %}
+            {{ form.location(class="form-control form-control-lg", placeholder="Location") }}
+            {% endif %}
+        </div>
+
+        {# bio #}
+        <div class="form-group col-xs-12 col-sm-8 col-lg-12 mx-auto d-block updateInfo">
+
+            {% if form.bio.errors %}
+            {{ form.bio(class="form-control form-control-lg is-invalid") }}
+            <div class="invalid-feedback">
+                {% for error in form.bio.errors %}
+                <span>{{ error }}</span>
+                {% endfor %}
+            </div>
+            {% else %}
+            {{ form.bio(class="form-control form-control-lg", placeholder="Bio") }}
+            {% endif %}
+        </div>
+
+        {# Update Profile Picture #}
+        <div class="form-group" id="upload_pic">
+            {{ form.profile_picture.label() }}
+            {{ form.profile_picture(class="form-control-file") }}
+            {% if form.profile_picture.errors %}
+            {% for error in form.profile_picture.errors %}
+                <span class="text-danger">{{ error }}</span><br>
+                {% endfor %}
+            {% endif %}
+            <span class="text-info">Note: Square images work best</span>
+        </div>
+
+    </fieldset>
+    {# Submit Button#}
+    <div class="form-group mx-auto d-block text-center">
+        {{ form.submit(class="btn btn-outline-primary") }}
+    </div>
+</form>
+
+{% endblock content %}

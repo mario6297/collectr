@@ -35,3 +35,16 @@ body {
 #slogan {
     color: #dddedf !important;
 }
+ #bio {
+     padding-left: 15px;
+     padding-right: 15px;
+ }
+
+ #updateInfo {
+     margin: 0 !important;
+ }
+
+ #upload_pic {
+     padding-left: 15px;
+     padding-right: 15px;
+ }

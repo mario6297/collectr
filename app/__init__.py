@@ -14,7 +14,7 @@ db = SQLAlchemy(app)
 bcrypt = Bcrypt(app)
 
 login_manager = LoginManager(app)
-login_manager.login_view = 'login'
+login_manager.login_view = 'login.login'
 login_manager.login_message_category = "info"
 
 from . import controllers
@@ -26,6 +26,7 @@ def register_blueprints(app):
     app.register_blueprint(controllers.credits.blueprint)
     app.register_blueprint(controllers.login.blueprint)
     app.register_blueprint(controllers.home_user.blueprint)
+    app.register_blueprint(controllers.update_account.blueprint)
     app.register_blueprint(controllers.logout.blueprint)
 
 

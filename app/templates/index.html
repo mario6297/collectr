@@ -147,7 +147,7 @@
             </div>
 
             {# Recaptcha #}
-            <div class="form-group col-xs-12 col-sm-8 col-lg-6 mx-auto d-block">
+            <div class="form-group col-xs-12 col-sm-8 col-lg-6 mx-auto d-block center">
 
                 {% if form.recaptcha.errors %}
                 {{ form.recaptcha(class="form-control form-control-lg is-invalid") }}
@@ -164,7 +164,7 @@
         </fieldset>
         {# Submit Button#}
         <div class="form-group mx-auto d-block text-center">
-            {{ form.submit(class="btn btn-outline-info") }}
+            {{ form.submit(class="btn btn-outline-primary") }}
         </div>
         <div class="border-top pt-3 text-center">
             <small class="text-muted already-have-account">

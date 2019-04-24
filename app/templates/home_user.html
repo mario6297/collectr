@@ -1,4 +1,31 @@
 {% extends "layout.html" %}
 {% block content %}
-{{ current_user }}
+<div class="container" id="username">
+    <div class="row">
+        <div class="col-md-4 col-xs-12 col-sm-6 col-lg-4">
+            <img alt="User Pic"
+                 src="{{ image }}"
+                 id="profile-image1" class="rounded-circle img-thumbnail">
+        </div>
+        <div class="col-md-8 col-xs-12 col-sm-6 col-lg-8">
+            <div class="container">
+                <br>
+                <h1 class="header">{{ user.username }}</h1>
+                <h6 class="text-muted">{{ user.first_name }} {{ user.last_name }}</h6>
+                {% if current_user.username == user.username %}
+                <!--               Open Modal   -->
+                <a href="{{ url_for('update_account.update_account') }}" class="btn btn-primary btn-sm"><i class="fas fa-cog"></i> Edit Profile</a>
+                {% endif %}
+            </div>
+            <hr>
+            <div id="bio">
+                <p>{{ user.bio }}</p>
+                <i class="fas fa-map-marker-alt"><span> {{ user.location }}</span></i>
+                <br>
+                <span>Joined: {{ user.joined.strftime('%B %Y') }}</span>
+            </div>
+            <hr>
+        </div>
+    </div>
+</div>
 {% endblock content %}

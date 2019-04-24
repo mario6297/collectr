@@ -1,4 +1,6 @@
 # -*- coding: utf-8 -*-
+import json
+
 from flask import Blueprint, render_template, redirect, url_for, flash
 from flask_login import current_user
 
@@ -12,7 +14,7 @@ blueprint = Blueprint('home', __name__)
 @blueprint.route('/', methods=["POST", "GET"])
 def home():
     if current_user.is_authenticated:
-        return redirect(url_for('home_user.home_user'))
+        return redirect(url_for('home_user.home_user', username=current_user.username))
     form = RegForm()
     if form.validate_on_submit():
         hashed_password = bcrypt.generate_password_hash(form.password.data).decode("utf-8")
