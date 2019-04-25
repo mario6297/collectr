@@ -45,3 +45,13 @@ V
 &app/static/bootstrap/css/bootstrap.css,2\1\213737115fb6138cfdbdbca72292033e49eae837
 Z
 *app/static/bootstrap/css/bootstrap.min.css,c\e\cebb5e31976596110a8d2fcc2e429df497c6a0f4
+Q
+!app/templates/update_account.html,1\8\186fd8e995a79dbfabbf10efe58f0fc3dababc8a
+Q
+!app/controllers/update_account.py,4\7\47bcdb3a9a99af9ba3825860b77388de2803b11a
+K
+app/controllers/new_post.py,4\a\4a5a0b9b29575e20be9f0a09c980efe5e8f4bc79
+K
+app/templates/new_post.html,9\4\94f3b216a06d4f01cf068ceb7d9dab2718a44134
+I
+app/static/js/new_post.js,6\3\6351c6600cd4075c9ac1484fba4ca1aacd5c37bf

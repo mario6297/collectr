@@ -62,6 +62,7 @@
                 <!-- Navbar Right Side -->
                 <div class="navbar-nav">
                     {% if current_user.is_authenticated %}
+                    <a class="nav-item nav-link shrink text-light" href="{{ url_for('new_post.new_post') }}"><i class="fas fa-plus"></i> New Post</a>
                     <a class="nav-item nav-link shrink text-light" href="{{ url_for('home.home') }}"><i class="fas fa-user"></i> Account</a>
                     <a class="nav-item nav-link shrink text-light" href="{{ url_for('logout.logout') }}"><i
                             class="fas fa-sign-out-alt"></i>
