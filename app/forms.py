@@ -91,4 +91,5 @@ class NewPost(FlaskForm):
     title = StringField("Title", validators=[DataRequired()])
     picture = FileField("Image", validators=[FileAllowed(["jpg", "png"])])
     description = StringField("Description")
+    submit = SubmitField("Post")
 
