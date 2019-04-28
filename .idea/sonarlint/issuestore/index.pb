@@ -55,3 +55,9 @@ K
 app/templates/new_post.html,9\4\94f3b216a06d4f01cf068ceb7d9dab2718a44134
 I
 app/static/js/new_post.js,6\3\6351c6600cd4075c9ac1484fba4ca1aacd5c37bf
+G
+app/controllers/post.py,f\4\f416a42fce7157377c1facc2185368d35dba9521
+G
+app/templates/post.html,1\8\18b45f4761c9a20d1353b37cb2afc2ff2339580a
+E
+app/services/image.py,1\4\142f90904404ce181b7a045eb9065ff6c5a05588

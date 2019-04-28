@@ -89,7 +89,7 @@ class UpdateAccount(FlaskForm):
 
 class NewPost(FlaskForm):
     title = StringField("Title", validators=[DataRequired()])
-    picture = FileField("Image", validators=[FileAllowed(["jpg", "png"])])
+    picture = FileField("Image", validators=[FileAllowed(["jpg", "png", "gif"]), DataRequired()])
     description = StringField("Description")
     submit = SubmitField("Post")
 

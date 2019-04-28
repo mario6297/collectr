@@ -1,0 +1,9 @@
+{% extends "layout.html" %}
+{% block content %}
+<p>Post ID: {{ post.id }}</p>
+<p>Post Title: {{ post.title }}</p>
+<p>Post Description: {{ post.description }}</p>
+<p>Author ID: {{ post.user_id }}</p>
+<p>Date Posted: {{ post.date_posted }}</p>
+<img src="{{ url_for('static', filename='posts/' + post.image) }}" alt="">
+{% endblock content %}

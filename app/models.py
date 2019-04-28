@@ -21,6 +21,7 @@ class User(db.Model, UserMixin):
     joined = db.Column(db.DateTime(), nullable=False, default=datetime.utcnow())
     bio = db.Column(db.String(200), nullable=True, unique=False)
     posts = db.relationship("Post", backref="author", lazy=True)
+    friends = db.Column(db.String(), nullable=True)
 
     def __repr__(self):
         return f"User('{self.username}', {self.email}, {self.id})"
@@ -31,5 +32,5 @@ class Post(db.Model):
     title = db.Column(db.String(), nullable=False)
     image = db.Column(db.String(), nullable=False)
     description = db.Column(db.Text(), nullable=True)
-    user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
+    user_id = db.Column(db.Integer(), db.ForeignKey('user.id'), nullable=False)
     date_posted = db.Column(db.DateTime(), nullable=False, default=datetime.utcnow())

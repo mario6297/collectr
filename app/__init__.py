@@ -29,6 +29,7 @@ def register_blueprints(app):
     app.register_blueprint(controllers.update_account.blueprint)
     app.register_blueprint(controllers.logout.blueprint)
     app.register_blueprint(controllers.new_post.blueprint)
+    app.register_blueprint(controllers.post.blueprint)
 
 
 register_blueprints(app)

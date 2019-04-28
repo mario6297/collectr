@@ -1,26 +1,11 @@
-import os
-from PIL import Image
-
 from flask import Blueprint, flash, request, render_template, redirect, url_for
 from flask_login import current_user, login_required
 
-from app import db, app
+from app import db
 from app.forms import UpdateAccount
+from app.services.image import save_pfp
 
 blueprint = Blueprint("update_account", __name__)
-
-
-def save_picture(picture):
-    file_ext = picture.filename.split(".")
-    picture_filename = current_user.username + "." + file_ext[1]
-    pic_path = os.path.join(app.root_path, "static/pfp", picture_filename)
-
-    image_size = (300, 300)
-    i = Image.open(picture)
-    i = i.resize(image_size)
-
-    i.save(pic_path)
-    return picture_filename
 
 
 @blueprint.route("/update_account/", methods=["GET", "POST"])
@@ -29,7 +14,7 @@ def update_account():
     form = UpdateAccount()
     if form.validate_on_submit():
         if form.profile_picture.data:
-            picture_filename = save_picture(form.profile_picture.data)
+            picture_filename = save_pfp(form.profile_picture.data)
             current_user.image_file = picture_filename
         current_user.email = form.email.data
         current_user.username = form.username.data
