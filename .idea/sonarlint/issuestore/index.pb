@@ -15,8 +15,6 @@ H
 app/forms.py,0\b\0bdf0d1910f4791aba158bcfa7ef18c04df7ca0e
 G
 app/controllers/home.py,6\e\6ee284f31390f6736b20c8e31aaa72a91417c825
-I
-app/controllers/errors.py,9\4\94cfc4925c4dcfdba13ce42fb4750463af13dcdf
 H
 app/templates/login.html,4\4\44e1395d5487da14707cdaf0b591c4e9c08b5d9b
 =
@@ -31,10 +29,6 @@ I
 extra_info.html,e\4\e41900635dc54083b627ba4a1d536f3b444d112f
 I
 app/templates/layout.html,1\9\19aa1324f50d53eae20df1a563915773e6c38194
-L
-app/templates/home_user.html,b\4\b451f09c8c11e027db71c6e3456c949a274c60e1
-L
-app/controllers/home_user.py,5\9\59e335840d07216e37a6f4f0e927153b51559957
 H
 app/controllers/login.py,4\e\4e50441a5d4fc327769195e5a846761f2d22e861
 J
@@ -61,3 +55,23 @@ G
 app/templates/post.html,1\8\18b45f4761c9a20d1353b37cb2afc2ff2339580a
 E
 app/services/image.py,1\4\142f90904404ce181b7a045eb9065ff6c5a05588
+D
+disposable_emails.py,c\0\c0d3c066395d4abcc210857132a9d54612d5e4e3
+D
+create_test_users.py,c\5\c5a9ba39dcf1ac64664212dbaa90025af3154682
+9
+	config.py,1\a\1a1b9769344cb239f2e540e1e6ee1efa2d3034ea
+6
+run.py,8\0\806d6ceb4e60342798038124ccf7dc1a423a4433
+H
+app/services/__init__.py,8\f\8f83503e5cf2fb2cdb035595942d392812f89bcc
+G
+app/controllers/feed.py,4\9\49b7762a3fa4ffcf31894b3a68c6a3c37f0263e5
+X
+(app/static/bootstrap/js/bootstrap.min.js,3\e\3e808cbf857f1f26a9cd94cac53c9c4871d7b982
+J
+app/controllers/account.py,6\0\60e80bcec482a4616d7481f9cb14ff58f1824783
+J
+app/templates/account.html,f\9\f922ca8fd94bfb5339c10533dd17fead597d1dc6
+O
+app/services/user_management.py,0\0\001ee07d30af102cfbef20761d81652ca91b18b4

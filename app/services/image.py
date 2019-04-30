@@ -1,3 +1,16 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+# =============================================================================
+# Filename: image.py
+# Author: Steve Tautonico
+# Date Created: 4/30/2019
+# Date Last Modified: 4/30/2019
+# Python Version: 3.6 - 3.7
+# =============================================================================
+"""Module handles saving images from forms and re-scaling to fit and save space"""
+# =============================================================================
+# Imports
+# =============================================================================
 import os
 from datetime import datetime
 

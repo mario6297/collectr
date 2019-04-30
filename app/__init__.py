@@ -1,7 +1,25 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+# =============================================================================
+# Filename: __init__.py
+# Author: Steve Tautonico
+# Date Created: 4/30/2019
+# Date Last Modified: 4/30/2019
+# Python Version: 3.6 - 3.7
+# =============================================================================
+"""The initialization file for the main 'app' package"""
+# =============================================================================
+# Imports
+# =============================================================================
+
 from flask import Flask, abort
 from flask_bcrypt import Bcrypt
 from flask_login import LoginManager
 from flask_sqlalchemy import SQLAlchemy
+
+__author__ = "Steve Tautonico"
+__contact__ = "stautonico@gmail.com"
+__date__ = "4/30/2019"
 
 app = Flask(__name__)
 app.config["SECRET_KEY"] = '96832c3f32b9a586095cf19384a9cccd1d51c9683f6e2239979d258cb975ba4f'
@@ -25,11 +43,12 @@ def register_blueprints(app):
     app.register_blueprint(controllers.home.blueprint)
     app.register_blueprint(controllers.credits.blueprint)
     app.register_blueprint(controllers.login.blueprint)
-    app.register_blueprint(controllers.home_user.blueprint)
+    app.register_blueprint(controllers.account.blueprint)
     app.register_blueprint(controllers.update_account.blueprint)
     app.register_blueprint(controllers.logout.blueprint)
     app.register_blueprint(controllers.new_post.blueprint)
     app.register_blueprint(controllers.post.blueprint)
+    app.register_blueprint(controllers.feed.blueprint)
 
 
 register_blueprints(app)

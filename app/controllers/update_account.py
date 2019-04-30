@@ -1,3 +1,16 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+# =============================================================================
+# Filename: update_account.py
+# Author: Steve Tautonico
+# Date Created: 4/30/2019
+# Date Last Modified: 4/30/2019
+# Python Version: 3.6 - 3.7
+# =============================================================================
+"""Handles forms related to updating users account information, ex: profile pic, username, bio, etc"""
+# =============================================================================
+# Imports
+# =============================================================================
 from flask import Blueprint, flash, request, render_template, redirect, url_for
 from flask_login import current_user, login_required
 
@@ -24,7 +37,7 @@ def update_account():
         current_user.bio = form.bio.data
         db.session.commit()
         flash("Your account has been updated", "success")
-        return redirect(url_for('home.home'))
+        return redirect(url_for('account.account', username=current_user.username))
     elif request.method == "GET":
         form.email.data = current_user.email
         form.username.data = current_user.username

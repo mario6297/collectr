@@ -1,3 +1,17 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+# =============================================================================
+# Filename: disposable_emails.py
+# Author: Steve Tautonico
+# Date Created: 4/30/2019
+# Date Last Modified: 4/30/2019
+# Python Version: 3.6 - 3.7
+# =============================================================================
+"""A list of disposable 'temporary' emails"""
+# =============================================================================
+# Imports
+# =============================================================================
+
 emails = [
     "0-mail.com", "0815.ru", "0clickemail.com", "10minutemail.com", "20minutemail.com", "2prong.com",
     "30minutemail.com", "3d-painting.com", "4warding.com", "4warding.net", "4warding.org", "60minutemail.com",

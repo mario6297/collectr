@@ -1,12 +1,22 @@
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-import json
-
-from flask import Blueprint, render_template, redirect, url_for, flash
+# =============================================================================
+# Filename: home.py
+# Author: Steve Tautonico
+# Date Created: 4/30/2019
+# Date Last Modified: 4/30/2019
+# Python Version: 3.6 - 3.7
+# =============================================================================
+"""Handles the forms and registration for users on the home page"""
+# =============================================================================
+# Imports
+# =============================================================================
+from flask import Blueprint, render_template, redirect, url_for, flash, abort
 from flask_login import current_user
 
-from app import db, bcrypt
 from app.forms import RegForm
-from app.models import User
+
+from app.services.user_management import register
 
 blueprint = Blueprint('home', __name__)
 
@@ -14,14 +24,13 @@ blueprint = Blueprint('home', __name__)
 @blueprint.route('/', methods=["POST", "GET"])
 def home():
     if current_user.is_authenticated:
-        return redirect(url_for('home_user.home_user', username=current_user.username))
+        return redirect(url_for('feed.feed', username=current_user.username))
     form = RegForm()
     if form.validate_on_submit():
-        hashed_password = bcrypt.generate_password_hash(form.password.data).decode("utf-8")
-        new_user = User(first_name=form.first_name.data, last_name=form.last_name.data, username=form.username.data,
-                        email=form.email.data, password=hashed_password)
-        db.session.add(new_user)
-        db.session.commit()
-        flash("Account successfully created!", "success")
-        return redirect(url_for("login.login"))
+        result = register(form)
+        if result:
+            flash("Account successfully created!", "success")
+            return redirect(url_for("login.login"))
+        else:
+            abort(500)
     return render_template('index.html', form=form)

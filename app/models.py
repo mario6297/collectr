@@ -1,6 +1,21 @@
-from app import db, login_manager
-from flask_login import UserMixin
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+# =============================================================================
+# Filename: models.py
+# Author: Steve Tautonico
+# Date Created: 4/30/2019
+# Date Last Modified: 4/30/2019
+# Python Version: 3.6 - 3.7
+# =============================================================================
+"""The tables and 'models' for the SQLAlchemy Database"""
+# =============================================================================
+# Imports
+# =============================================================================
 from datetime import datetime
+
+from flask_login import UserMixin
+
+from app import db, login_manager
 
 
 @login_manager.user_loader
@@ -21,7 +36,8 @@ class User(db.Model, UserMixin):
     joined = db.Column(db.DateTime(), nullable=False, default=datetime.utcnow())
     bio = db.Column(db.String(200), nullable=True, unique=False)
     posts = db.relationship("Post", backref="author", lazy=True)
-    friends = db.Column(db.String(), nullable=True)
+    following = db.Column(db.String(), nullable=True)
+    verified = db.Column(db.Boolean(), nullable=False, default=False)
 
     def __repr__(self):
         return f"User('{self.username}', {self.email}, {self.id})"

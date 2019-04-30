@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+{% block content %}
+<h3>Following:</h3>
+<ul>
+{% for follow in following %}
+<li>{{ follow }}</li>
+{% endfor %}
+    </ul>
+{{ current_user }}
+{% endblock content %}

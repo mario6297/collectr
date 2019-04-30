@@ -1,3 +1,16 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+# =============================================================================
+# Filename: new_post.py
+# Author: Steve Tautonico
+# Date Created: 4/30/2019
+# Date Last Modified: 4/30/2019
+# Python Version: 3.6 - 3.7
+# =============================================================================
+"""Handles forms and logic for creating new posts and adding it to the db"""
+# =============================================================================
+# Imports
+# =============================================================================
 from flask import render_template, Blueprint, redirect, url_for
 from flask_login import login_required, current_user
 

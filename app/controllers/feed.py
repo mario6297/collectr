@@ -1,28 +1,31 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 # =============================================================================
-# Filename: post.py
+# Filename: feed.py
 # Author: Steve Tautonico
 # Date Created: 4/30/2019
 # Date Last Modified: 4/30/2019
 # Python Version: 3.6 - 3.7
 # =============================================================================
-"""Handles display post and related information as well as redirects to related info"""
+"""Handles the users feed containing posts from followed users"""
 # =============================================================================
 # Imports
 # =============================================================================
 from flask import Blueprint, render_template
-from flask_login import login_required
+from flask_login import login_required, current_user
+from app.models import User
 
-from app.models import Post, User
-
-blueprint = Blueprint("post", __name__)
+blueprint = Blueprint("feed", __name__)
 
 
-@blueprint.route('/post/<id>')
+@blueprint.route('/feed/')
 @login_required
-def post(id):
-    post = Post.query.filter_by(id=id).first()
-    author = User.query.filter_by(id=post.user_id).first()
-    date = post.date_posted.strftime("%B %d, %Y")
-    return render_template("post.html", post=post, author=author, posted=date)
+def feed():
+    f_un = []
+    try:
+        following = current_user.following.split(',')
+        for follow in following:
+            f_un.append(User.query.filter_by(id=follow).first().username)
+    except:
+        pass
+    return render_template("feed.html", title="Feed", following=f_un)

@@ -7,7 +7,7 @@
 │   │   ├── credits.py
 │   │   ├── errors.py
 │   │   ├── home.py
-│   │   ├── home_user.py
+│   │   ├── account.py
 │   │   ├── login.py
 │   │   ├── logout.py
 │   │   ├── new_post.py
@@ -58,7 +58,7 @@
 │   └── templates
 │       ├── credits.html
 │       ├── error.html
-│       ├── home_user.html
+│       ├── account.html
 │       ├── index.html
 │       ├── layout.html
 │       ├── login.html

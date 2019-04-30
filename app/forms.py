@@ -1,3 +1,16 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+# =============================================================================
+# Filename: forms.py
+# Author: Steve Tautonico
+# Date Created: 4/30/2019
+# Date Last Modified: 4/30/2019
+# Python Version: 3.6 - 3.7
+# =============================================================================
+"""The forms that accept inputs from the html"""
+# =============================================================================
+# Imports
+# =============================================================================
 from flask_wtf import FlaskForm, RecaptchaField
 from flask_wtf.file import FileField, FileAllowed
 from wtforms import StringField, PasswordField, SubmitField, BooleanField
@@ -55,11 +68,11 @@ class LogInForm(FlaskForm):
 
 class UpdateAccount(FlaskForm):
     email = StringField("Email", validators=[Email()])
-    username = StringField("Username")
+    username = StringField("Username", validators=[Length(max=20)])
     first_name = StringField("First Name")
     last_name = StringField("Last Name")
-    location = StringField("Location")
-    bio = StringField("Bio")
+    location = StringField("Location", validators=[Length(max=50)])
+    bio = StringField("Bio", validators=[Length(max=200)])
     profile_picture = FileField("Update Profile Picture", validators=[FileAllowed(["jpg", "png", "gif"])])
     submit = SubmitField("Update")
 

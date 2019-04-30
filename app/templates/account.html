@@ -1,5 +1,10 @@
 {% extends "layout.html" %}
 {% block content %}
+<script>
+    $(document).ready(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+    });
+</script>
 <div class="container" id="username">
     <div class="row">
         <div class="col-md-4 col-xs-12 col-sm-6 col-lg-4">
@@ -10,11 +15,18 @@
         <div class="col-md-8 col-xs-12 col-sm-6 col-lg-8">
             <div class="container">
                 <br>
+                {% if user.verified %}
+                <h1 class="header">{{ user.username }} <i class="fas fa-check-circle"
+                                                          style="font-size: xx-large; color: #AA93D5;"
+                                                          data-toggle="tooltip" title="Verified"></i></h1>
+                {% else %}
                 <h1 class="header">{{ user.username }}</h1>
+                {% endif %}
                 <h6 class="text-muted">{{ user.first_name }} {{ user.last_name }}</h6>
                 {% if current_user.username == user.username %}
                 <!--               Open Modal   -->
-                <a href="{{ url_for('update_account.update_account') }}" class="btn btn-primary btn-sm"><i class="fas fa-cog"></i> Edit Profile</a>
+                <a href="{{ url_for('update_account.update_account') }}" class="btn btn-primary btn-sm"><i
+                        class="fas fa-cog"></i> Edit Profile</a>
                 {% endif %}
             </div>
             <hr>

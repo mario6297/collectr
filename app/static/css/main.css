@@ -35,16 +35,29 @@ body {
 #slogan {
     color: #dddedf !important;
 }
- #bio {
-     padding-left: 15px;
-     padding-right: 15px;
- }
 
- #updateInfo {
-     margin: 0 !important;
- }
+#bio {
+    padding-left: 15px;
+    padding-right: 15px;
+}
 
- #upload_pic {
-     padding-left: 15px;
-     padding-right: 15px;
- }
+#updateInfo {
+    margin: 0 !important;
+}
+
+#upload_pic {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+#post-title {
+    text-decoration: underline #b4b4b4;
+}
+
+a:hover {
+    color: #AA93D5;
+}
+
+#post-img {
+    width: 80vh;
+}
