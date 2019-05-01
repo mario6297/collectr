@@ -1,6 +1,6 @@
 {% extends "layout.html" %}
 {% block content %}
-<form method="POST" action="" class="form-signin" enctype="multipart/form-data">
+<form method="POST" action="" class="form-signin" enctype="multipart/form-data" onsubmit="submit.disabled=true">
     {{ form.hidden_tag() }}
     {{ form.csrf_token }}
     <fieldset class="form-group updateInfo">

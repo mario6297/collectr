@@ -4,10 +4,11 @@
 # Filename: forms.py
 # Author: Steve Tautonico
 # Date Created: 4/30/2019
-# Date Last Modified: 4/30/2019
+# Date Last Modified: 5/01/2019
 # Python Version: 3.6 - 3.7
 # =============================================================================
 """The forms that accept inputs from the html"""
+from flask_login import current_user
 # =============================================================================
 # Imports
 # =============================================================================
@@ -15,7 +16,6 @@ from flask_wtf import FlaskForm, RecaptchaField
 from flask_wtf.file import FileField, FileAllowed
 from wtforms import StringField, PasswordField, SubmitField, BooleanField
 from wtforms.validators import DataRequired, Length, Email, EqualTo, ValidationError
-from flask_login import current_user
 
 import common_passwords
 from app.models import User
@@ -106,3 +106,12 @@ class NewPost(FlaskForm):
     description = StringField("Description")
     submit = SubmitField("Post")
 
+
+class EditPost(FlaskForm):
+    title = StringField("Title")
+    description = StringField("Description")
+    submit = SubmitField("Edit")
+
+
+class DeletePost(FlaskForm):
+    submit = SubmitField("Delete")

@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+{% block content %}
+<form method="POST" action="" class="form-signin" enctype="multipart/form-data" onsubmit="submit.disabled=true">
+    {{ form.hidden_tag() }}
+    {{ form.csrf_token }}
+    <h1 class="text-danger text-center">Are you sure you would like to delete this post?</h1>
+    <h2 class="text-danger text-center">(This is irreversible!)</h2>
+    {# Submit Button#}
+    <div class="form-group mx-auto d-block text-center">
+        {{ form.submit(class="btn btn-outline-danger btn-lg") }}
+    </div>
+</form>
+
+{% endblock content %}

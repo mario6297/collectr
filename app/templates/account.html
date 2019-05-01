@@ -23,10 +23,14 @@
                 <h1 class="header">{{ user.username }}</h1>
                 {% endif %}
                 <h6 class="text-muted">{{ user.first_name }} {{ user.last_name }}</h6>
+                {% if total_posts == 1 %}
+                <span class="d-inline-block"><b>{{ total_posts }}</b> Post</span>
+                {% else %}
+                <span class="d-inline-block"><b>{{ total_posts }}</b> Posts</span>
+                {% endif %}
                 {% if current_user.username == user.username %}
-                <!--               Open Modal   -->
-                <a href="{{ url_for('update_account.update_account') }}" class="btn btn-primary btn-sm"><i
-                        class="fas fa-cog"></i> Edit Profile</a>
+                <a href="{{ url_for('update_account.update_account') }}" class="btn btn-primary btn-sm d-inline-block float-right
+                        class=" fas fa-cog"></i> Edit Profile</a>
                 {% endif %}
             </div>
             <hr>
@@ -37,6 +41,24 @@
                 <span>Joined: {{ user.joined.strftime('%B %Y') }}</span>
             </div>
             <hr>
+            <!--            Under title-->
+
+            {% if not posts %}
+            {% if current_user == user %}
+            <h4>You have no posts</h4>
+            {% else %}
+            <h4>This user has no posts</h4>
+            {% endif %}
+            {% else %}
+            {% for post in posts %}
+            <div class="border m-2 p-2">
+                <a href="{{ url_for('post.post', id=post.id) }}"><h4 class="text-center">{{ post.title }}</h4></a>
+                <img src="{{ url_for('static', filename='posts/' + post.image) }}" alt="" class="img-fluid border"
+                     id="post-img">
+            </div>
+            {% endfor %}
+            {% endif %}
+
         </div>
     </div>
 </div>

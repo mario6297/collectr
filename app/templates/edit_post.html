@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+{% block content %}
+<form method="POST" action="" class="form-signin" enctype="multipart/form-data" onsubmit="submit.disabled=true">
+    {{ form.hidden_tag() }}
+    {{ form.csrf_token }}
+    <fieldset class="form-group updateInfo">
+        {# title #}
+        <div class="form-group col-xs-12 col-sm-8 col-lg-12 mx-auto d-block updateInfo">
+            {% if form.title.errors %}
+            {{ form.title(class="form-control form-control-lg is-invalid") }}
+            <div class="invalid-feedback">
+                {% for error in form.title.errors %}
+                <span>{{ error }}</span>
+                {% endfor %}
+            </div>
+            {% else %}
+            {{ form.title(class="form-control form-control-lg", placeholder="Title") }}
+            {% endif %}
+        </div>
+
+        {# description #}
+        <div class="form-group col-xs-12 col-sm-8 col-lg-12 mx-auto d-block updateInfo">
+
+            {% if form.description.errors %}
+            {{ form.description(class="form-control form-control-lg is-invalid") }}
+            <div class="invalid-feedback">
+                {% for error in form.description.errors %}
+                <span>{{ error }}</span>
+                {% endfor %}
+            </div>
+            {% else %}
+            {{ form.description(class="form-control form-control-lg", placeholder="Description") }}
+            {% endif %}
+        </div>
+    </fieldset>
+    {# Submit Button#}
+    <div class="form-group mx-auto d-block text-center">
+        {{ form.submit(class="btn btn-outline-primary") }}
+    </div>
+</form>
+
+{% endblock content %}

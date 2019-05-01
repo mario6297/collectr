@@ -75,3 +75,11 @@ J
 app/templates/account.html,f\9\f922ca8fd94bfb5339c10533dd17fead597d1dc6
 O
 app/services/user_management.py,0\0\001ee07d30af102cfbef20761d81652ca91b18b4
+L
+app/controllers/edit_post.py,0\1\01d8f43dafde79a4e4546d94be4d09aafb394aff
+N
+app/controllers/delete_post.py,9\a\9ac1763dda57c1ad11b8d68c59e106c79bb86f30
+N
+app/templates/delete_post.html,4\c\4cfc2cf2c5d11fcc28b7a97bf2fd6d19798e68b9
+L
+app/templates/edit_post.html,a\4\a4812cc75608fb42c909a08518c1dbf7bc5162f4

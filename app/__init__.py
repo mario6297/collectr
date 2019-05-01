@@ -4,7 +4,7 @@
 # Filename: __init__.py
 # Author: Steve Tautonico
 # Date Created: 4/30/2019
-# Date Last Modified: 4/30/2019
+# Date Last Modified: 5/01/2019
 # Python Version: 3.6 - 3.7
 # =============================================================================
 """The initialization file for the main 'app' package"""
@@ -49,6 +49,8 @@ def register_blueprints(app):
     app.register_blueprint(controllers.new_post.blueprint)
     app.register_blueprint(controllers.post.blueprint)
     app.register_blueprint(controllers.feed.blueprint)
+    app.register_blueprint(controllers.edit_post.blueprint)
+    app.register_blueprint(controllers.delete_post.blueprint)
 
 
 register_blueprints(app)

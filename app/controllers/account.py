@@ -13,7 +13,7 @@
 # =============================================================================
 from flask import Blueprint, render_template, url_for, abort
 from flask_login import login_required
-from app.models import User
+from app.models import User, Post
 
 
 blueprint = Blueprint("account", __name__)
@@ -27,5 +27,6 @@ def account(username):
     user = User.query.filter_by(username=username).first()
     if not user:
         abort(404)
+    posts = Post.query.filter_by(user_id=user.id).all()
     image = url_for('static', filename='pfp/' + user.image_file)
-    return render_template("account.html", title="Home", image=image, user=user)
+    return render_template("account.html", title="Home", image=image, user=user, posts=posts, total_posts=len(posts))

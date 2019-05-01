@@ -4,7 +4,7 @@
 <div class="container">
     <div class="col-md-6">
         <div class="form-group">
-            <form method="POST" action="" class="form-signin" enctype="multipart/form-data">
+            <form method="POST" action="" class="form-signin" enctype="multipart/form-data" onsubmit="submit.disabled=true">
                 {{ form.hidden_tag() }}
                 {{ form.csrf_token }}
                 <fieldset class="form-group">

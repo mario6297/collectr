@@ -44,7 +44,6 @@ def save_post(picture):
     if width > 1080 or height > 1080:
         biggest = max(width, height)
         scale = (1080/biggest)
-        print(scale)
         final_size = (round(width*scale), round(height*scale))
         i = i.resize(final_size)
 
