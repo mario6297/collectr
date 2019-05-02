@@ -6,5 +6,9 @@
 <li>{{ follow }}</li>
 {% endfor %}
     </ul>
+
+{% for post in posts %}
+{{ post }}
+{% endfor %}
 {{ current_user }}
 {% endblock content %}
