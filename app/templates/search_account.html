@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+{% block content %}
+{{ result }}
+<div class="container">
+    <div class="col-md-6 mx-auto">
+        <div class="form-group">
+            <form method="POST" action="" class="form-signin" enctype="multipart/form-data"
+                  onsubmit="submit.disabled=true">
+                {{ form.hidden_tag() }}
+                {{ form.csrf_token }}
+                <fieldset class="form-group">
+                    <legend class="form-group col-xs-12 col-sm-8 col-lg-9 mx-auto d-block">Find Users</legend>
+
+                    {# username #}
+                    <div class="form-group col-xs-12 col-sm-8 col-lg-9 mx-auto d-block">
+
+                        {% if form.username.errors %}
+                        {{ form.username(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.username.errors %}
+                            <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                        {% else %}
+                        {{ form.username(class="form-control form-control-lg", placeholder="Username") }}
+                        {% endif %}
+                    </div>
+                    {# Search Button#}
+                    <div class="form-group col-xs-12 col-sm-8 col-lg-9 mx-auto d-block">
+                        {{ form.submit(class="btn btn-outline-primary") }}
+                    </div>
+
+                </fieldset>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock content %}

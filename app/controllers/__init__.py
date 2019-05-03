@@ -4,7 +4,7 @@
 # Filename: __init__.py
 # Author: Steve Tautonico
 # Date Created: 4/30/2019
-# Date Last Modified: 5/02/2019
+# Date Last Modified: 5/03/2019
 # Python Version: 3.6 - 3.7
 # =============================================================================
 """Initialization script for the controllers package.
@@ -12,7 +12,8 @@ Controllers separate and handle all information being passed to the HTML templat
 # =============================================================================
 # Imports
 # =============================================================================
-from . import credits, home, login, account, logout, update_account, new_post, post, feed, edit_post, delete_post, following
+from . import credits, home, login, account, logout, update_account, new_post, post, feed, edit_post, delete_post, \
+    following, search_account, following_list
 
 __author__ = "Steve Tautonico"
 __contact__ = "stautonico@gmail.com"

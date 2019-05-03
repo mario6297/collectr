@@ -4,7 +4,7 @@
 # Filename: account.py
 # Author: Steve Tautonico
 # Date Created: 4/30/2019
-# Date Last Modified: 5/02/2019
+# Date Last Modified: 5/03/2019
 # Python Version: 3.6 - 3.7
 # =============================================================================
 """Account page for a user. Preforms several checks and passes data to the HTML"""
@@ -22,11 +22,12 @@ blueprint = Blueprint("account", __name__)
 @blueprint.route("/account/<username>")
 @login_required
 def account(username):
+    user = User.query.filter_by(username=username).first()
     # Create a blank list to store the int versions of the following user ids
     current_user_following_int = []
     # Grab the current user's following list and split it by comma
     try:
-        current_user_following_str = current_user.following.split(',')
+        current_user_following_str = user.following.split(',')
         # Iterate through all the ids in the string list
         for following in current_user_following_str:
             # append the int version to the int ids list

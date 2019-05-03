@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="container">
+    {% if not follow_list %}
+    <h1 class="text-center text-danger">No users found!</h1>
+    {% else %}
+    <span>{{ follow_list|length }} result(s) found</span>
+    {% for user in follow_list %}
+    <div class="card m-3 w-50 mx-auto">
+        <div class="card-body m-3 text-center">
+            <img alt="User Pic" src="{{ url_for('static', filename='pfp/' + user.image_file) }}" id="profile-image1"
+                 class="img-thumbnail small" style="max-width: 100px; max-height: 100px;">
+            <h3 style="overflow-wrap: break-word; word-wrap: break-word; hyphens: auto;"><a
+                    href="{{ url_for('account.account', username=user.username) }}">
+                {{ user.username }}</a>
+            </h3>
+        </div>
+    </div>
+    {% endfor %}
+    {% endif %}
+</div>
+{% endblock content %}

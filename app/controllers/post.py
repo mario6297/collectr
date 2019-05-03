@@ -4,7 +4,7 @@
 # Filename: post.py
 # Author: Steve Tautonico
 # Date Created: 4/30/2019
-# Date Last Modified: 4/30/2019
+# Date Last Modified: 5/03//2019
 # Python Version: 3.6 - 3.7
 # =============================================================================
 """Handles display post and related information as well as redirects to related info"""
@@ -23,6 +23,4 @@ blueprint = Blueprint("post", __name__)
 @login_required
 def post(id):
     post = Post.query.filter_by(id=id).first()
-    author = User.query.filter_by(id=post.user_id).first()
-    date = post.date_posted.strftime("%B %d, %Y")
-    return render_template("post.html", post=post, author=author, posted=date)
+    return render_template("post.html", post=post)

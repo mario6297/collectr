@@ -1,8 +1,8 @@
 {% extends "layout.html" %}
 {% block content %}
 <div class="container card p-3">
-    <p><a href="{{ url_for('account.account', username=author.username) }}" class="d-inline-block">{{ author.username
-        }}</a> posted on {{ posted }}</p>
+    <p><a href="{{ url_for('account.account', username=get_user(post).username) }}" class="d-inline-block">{{
+        get_user_post(post).username }}</a> posted on {{ post.date_posted.strftime("%B %d, %Y") }}</p>
 
     <div class="card-body">
         <h1 class="text-center" id="post-title">{{ post.title }}</h1>
@@ -13,7 +13,7 @@
         <hr>
         <p>{{ post.description }}</p>
         <br>
-        {% if author == current_user %}
+        {% if get_user_post(post) == current_user %}
         <a href="{{ url_for('delete_post.delete_post', id=post.id) }}"
            class="btn btn-danger d-inline-block float-right m-1"><i class="fas fa-trash-alt"></i> Delete</a>
         <a href="{{ url_for('edit_post.edit_post', id=post.id) }}"

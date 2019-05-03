@@ -2,13 +2,13 @@
 {% block content %}
 <script type="text/javascript" src="{{ url_for('static', filename='js/new_post.js') }}"></script>
 <div class="container">
-    <div class="col-md-6">
+    <div class="col-md-6 mx-auto">
         <div class="form-group">
             <form method="POST" action="" class="form-signin" enctype="multipart/form-data" onsubmit="submit.disabled=true">
                 {{ form.hidden_tag() }}
                 {{ form.csrf_token }}
                 <fieldset class="form-group">
-                    <legend class="form-group col-xs-12 col-sm-8 col-lg-9 mx-auto d-block">New Post</legend>
+                    <legend class="form-group col-xs-12 col-sm-8 col-lg-9 mx-auto d-block text-center">New Post</legend>
 
                     {# title #}
                     <div class="form-group col-xs-12 col-sm-8 col-lg-9 mx-auto d-block">

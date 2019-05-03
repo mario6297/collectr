@@ -4,7 +4,7 @@
 # Filename: __init__.py
 # Author: Steve Tautonico
 # Date Created: 4/30/2019
-# Date Last Modified: 5/02/2019
+# Date Last Modified: 5/03/2019
 # Python Version: 3.6 - 3.7
 # =============================================================================
 """The initialization file for the main 'app' package"""
@@ -36,6 +36,7 @@ login_manager.login_view = 'login.login'
 login_manager.login_message_category = "info"
 
 from . import controllers
+from .models import User
 
 
 def register_blueprints(app):
@@ -53,9 +54,25 @@ def register_blueprints(app):
     app.register_blueprint(controllers.delete_post.blueprint)
     app.register_blueprint(controllers.following.blueprint_follow)
     app.register_blueprint(controllers.following.blueprint_unfollow)
+    app.register_blueprint(controllers.search_account.blueprint)
+    app.register_blueprint(controllers.following_list.blueprint)
 
 
 register_blueprints(app)
+
+
+def get_user_post(post):
+    author = User.query.filter_by(id=post.user_id).first()
+    return author
+
+
+def get_user_from_id(id):
+    user = User.query.filter_by(id=id).first()
+    return user
+
+
+app.jinja_env.globals.update(get_user_post=get_user_post)
+app.jinja_env.globals.update(get_user_from_id=get_user_from_id)
 
 
 # @app.errorhandler(Exception)

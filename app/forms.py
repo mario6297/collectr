@@ -4,7 +4,7 @@
 # Filename: forms.py
 # Author: Steve Tautonico
 # Date Created: 4/30/2019
-# Date Last Modified: 5/01/2019
+# Date Last Modified: 5/03/2019
 # Python Version: 3.6 - 3.7
 # =============================================================================
 """The forms that accept inputs from the html"""
@@ -115,3 +115,8 @@ class EditPost(FlaskForm):
 
 class DeletePost(FlaskForm):
     submit = SubmitField("Delete")
+
+
+class SearchAccount(FlaskForm):
+    username = StringField("Username")
+    submit = SubmitField("Search")

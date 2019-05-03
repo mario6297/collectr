@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{% block content %}
+{% if users %}
+<div class="container">
+    <span>{{ users|length }} result(s) found</span>
+    {% for user in users %}
+    <div class="card m-3 w-50 mx-auto">
+        <div class="card-body m-3 text-center">
+            <img alt="User Pic" src="{{ url_for('static', filename='pfp/' + user.image_file) }}" id="profile-image1"
+                 class="img-thumbnail d-inline-block small" style="max-width: 100px; max-height: 100px;">
+            <h3 class="d-inline-block" style="overflow-wrap: break-word; word-wrap: break-word; hyphens: auto;"><a
+                    href="{{ url_for('account.account', username=user.username) }}">
+                {{ user.username }}</a>
+            </h3>
+            <h5>{{ user.first_name }} {{ user.last_name }}</h5>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% else %}
+<h1 class="text-center text-danger">No users found!</h1>
+{% endif %}
+{% endblock content %}
