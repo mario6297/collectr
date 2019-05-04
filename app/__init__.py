@@ -11,7 +11,6 @@
 # =============================================================================
 # Imports
 # =============================================================================
-
 from flask import Flask, abort
 from flask_bcrypt import Bcrypt
 from flask_login import LoginManager
