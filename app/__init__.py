@@ -25,8 +25,8 @@ app = Flask(__name__)
 app.config["SECRET_KEY"] = '96832c3f32b9a586095cf19384a9cccd1d51c9683f6e2239979d258cb975ba4f'
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///site.db"
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
-app.config["RECAPTCHA_PUBLIC_KEY"] = "6LcaaZkUAAAAAAX5Ff8gbbKglzAvHl31A7pbVYbM"
-app.config["RECAPTCHA_PRIVATE_KEY"] = "6LcaaZkUAAAAADUqadT2yzMA0mHD_m0h48D_aVMg"
+app.config["RECAPTCHA_PUBLIC_KEY"] = "6Lff6qEUAAAAAAHNHGS5RPx4uHUKNFstqrL5zPlP"
+app.config["RECAPTCHA_PRIVATE_KEY"] = "6Lff6qEUAAAAAJ26bVWjAIsoLWR-JbAHaXTdqdFH"
 db = SQLAlchemy(app)
 
 bcrypt = Bcrypt(app)
