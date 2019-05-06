@@ -5,6 +5,7 @@
     {{ form.csrf_token }}
     <fieldset class="form-group updateInfo">
         {# Username #}
+        <h5>{{ form.username.label(class="form-group col-xs-12 col-sm-8 col-lg-12 mx-auto d-block") }}</h5>
         <div class="form-group col-xs-12 col-sm-8 col-lg-12 mx-auto d-block updateInfo">
             {% if form.username.errors %}
             {{ form.username(class="form-control form-control-lg is-invalid") }}
@@ -19,6 +20,7 @@
         </div>
 
         {# email #}
+        <h5>{{ form.email.label(class="form-group col-xs-12 col-sm-8 col-lg-12 mx-auto d-block") }}</h5>
         <div class="form-group col-xs-12 col-sm-8 col-lg-12 mx-auto d-block updateInfo">
 
             {% if form.email.errors %}
@@ -34,6 +36,7 @@
         </div>
 
         {# first_name #}
+        <h5>{{ form.first_name.label(class="form-group col-xs-12 col-sm-8 col-lg-12 mx-auto d-block") }}</h5>
         <div class="form-group col-xs-12 col-sm-8 col-lg-12 mx-auto d-block updateInfo">
 
             {% if form.first_name.errors %}
@@ -49,6 +52,7 @@
         </div>
 
         {# last_name #}
+        <h5>{{ form.last_name.label(class="form-group col-xs-12 col-sm-8 col-lg-12 mx-auto d-block") }}</h5>
         <div class="form-group col-xs-12 col-sm-8 col-lg-12 mx-auto d-block updateInfo">
 
             {% if form.last_name.errors %}
@@ -64,6 +68,7 @@
         </div>
 
         {# location #}
+        <h5>{{ form.location.label(class="form-group col-xs-12 col-sm-8 col-lg-12 mx-auto d-block") }}</h5>
         <div class="form-group col-xs-12 col-sm-8 col-lg-12 mx-auto d-block updateInfo">
 
             {% if form.location.errors %}
@@ -79,6 +84,7 @@
         </div>
 
         {# bio #}
+        <h5>{{ form.bio.label(class="form-group col-xs-12 col-sm-8 col-lg-12 mx-auto d-block") }}</h5>
         <div class="form-group col-xs-12 col-sm-8 col-lg-12 mx-auto d-block updateInfo">
 
             {% if form.bio.errors %}
@@ -95,7 +101,7 @@
 
         {# Update Profile Picture #}
         <div class="form-group" id="upload_pic">
-            {{ form.profile_picture.label() }}
+            {{ form.profile_picture.label(class="form-group col-xs-12 col-sm-8 col-lg-12 mx-auto d-block") }}
             {{ form.profile_picture(class="form-control-file") }}
             {% if form.profile_picture.errors %}
             {% for error in form.profile_picture.errors %}
@@ -109,6 +115,10 @@
     {# Submit Button#}
     <div class="form-group mx-auto d-block text-center">
         {{ form.submit(class="btn btn-outline-primary") }}
+    </div>
+    <!--    Cancel Button-->
+    <div class="form-group mx-auto d-block text-center">
+        <a class="btn btn-outline-warning" href="{{ url_for('account.account', username=current_user.username) }}">Cancel</a>
     </div>
 </form>
 

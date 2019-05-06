@@ -154,20 +154,7 @@
                 {% endif %}
             </div>
 
-            {# Recaptcha #}
-            <div class="form-group col-xs-12 col-sm-8 col-lg-6 mx-auto d-block center" align="center">
 
-                {% if form.recaptcha.errors %}
-                {{ form.recaptcha(class="form-control form-control-lg is-invalid") }}
-                <div class="invalid-feedback">
-                    {% for error in form.recaptcha.errors %}
-                    <span>{{ error }}</span>
-                    {% endfor %}
-                </div>
-                {% else %}
-                {{ form.recaptcha(class="form-control form-control-lg") }}
-                {% endif %}
-            </div>
 
         </fieldset>
         {# Submit Button#}

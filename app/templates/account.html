@@ -29,7 +29,7 @@
                 <span class="d-inline-block"><b>{{ total_posts }}</b> Posts</span>
                 {% endif %}
                 <a href="{{ url_for('following_list.following_list', username=user.username) }}"><span
-                        class="d-inline-block">&nbsp;&nbsp;<b>{{ current_user_following|length }}</b> Following</span></a>
+                        class="d-inline-block">&nbsp;&nbsp;<b>{{ account_user_following|length }}</b> Following</span></a>
                 {% if current_user.username == user.username %}
                 <a href="{{ url_for('update_account.update_account') }}" class="btn btn-primary btn-sm d-inline-block float-right
                         class=" fas fa-cog"></i> Edit Profile</a>

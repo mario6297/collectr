@@ -4,7 +4,7 @@
 # Filename: following.py
 # Author: Steve Tautonico
 # Date Created: 5/2/2019
-# Date Last Modified: 5/2/2019
+# Date Last Modified: 5/04/2019
 # Python Version: 3.6 - 3.7
 # =============================================================================
 """Controls following and un-following of users"""
@@ -21,6 +21,26 @@ blueprint_follow = Blueprint("follow", __name__)
 blueprint_unfollow = Blueprint("unfollow", __name__)
 
 
+def add_user_to_follow_split(user):
+    # Convert following to list
+    user_following = current_user.following.split(",")
+    # Add the new ID to the list
+    user_following.append(str(user.id))
+    # Remove the blank users
+    if "" in user_following:
+        user_following.remove("")
+    current_user.following = ",".join(user_following)
+    # Commit the changes
+    db.session.commit()
+    return redirect(url_for("account.account", username=user.username))
+
+
+def add_user_to_follow(user):
+    current_user.following = user.id
+    db.session.commit()
+    return redirect(url_for("account.account", username=user.username))
+
+
 @blueprint_follow.route("/follow/<id>")
 @login_required
 def follow(id):
@@ -34,27 +54,21 @@ def follow(id):
         flash("You cannot follow yourself", "warning")
         return redirect(request.referrer)
     # Check if the user isn't in the list of following
-    if str(id) not in current_user.following.split(','):
-        # Convert following to list
-        user_following = current_user.following.split(",")
-        # Add the new ID to the list
-        user_following.append(id)
-        # Combine the list with commas and replace the users following
-        # Check if the user is only following one person
-        # Remove the blank users
-        if "" in user_following:
-            user_following.remove("")
-        if len(user_following) == 1:
-            current_user.following = id
+    try:
+        if str(id) not in current_user.following.split(','):
+            add_user_to_follow_split(user)
+            return redirect(request.referrer)
+        # If the user is on the following list
         else:
-            current_user.following = ",".join(user_following)
-        # Commit the changes
-        db.session.commit()
-        return redirect(url_for("account.account", username=user.username))
-    # If the user is on the following list
-    else:
-        flash("You are already following this user", "warning")
-        return redirect(request.referrer)
+            flash("You are already following this user", "warning")
+            return redirect(request.referrer)
+    except Exception as e:
+        try:
+            if not current_user.following:
+                add_user_to_follow(user)
+                return redirect(request.referrer)
+        except Exception:
+            abort(500)
 
 
 @blueprint_unfollow.route("/unfollow/<id>")
@@ -74,8 +88,12 @@ def unfollow(id):
         user_following = current_user.following.split(",")
         # Add the new ID to the list
         user_following.remove(id)
-        # Combine the list with commas and replace the users following
-        current_user.following = ",".join(user_following)
+        # Check if the user has 0 following
+        if not user_following:
+            current_user.following = None
+        else:
+            # Combine the list with commas and replace the users following
+            current_user.following = ",".join(user_following)
         # Commit the changes
         db.session.commit()
         return redirect(url_for("account.account", username=user.username))

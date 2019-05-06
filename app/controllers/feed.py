@@ -4,7 +4,7 @@
 # Filename: feed.py
 # Author: Steve Tautonico
 # Date Created: 4/30/2019
-# Date Last Modified: 5/3/2019
+# Date Last Modified: 5/4/2019
 # Python Version: 3.6 - 3.7
 # =============================================================================
 """Handles the users feed containing posts from followed users"""
@@ -27,10 +27,13 @@ def feed():
     sub_posts = []
     # List for flattened posts
     posts = []
-    for usr_following in current_user.following.split(","):
-        user = User.query.filter_by(id=int(usr_following)).first()
-        following.append(user)
-        sub_posts.append(Post.query.filter_by(user_id=user.id).all())
+    try:
+        for usr_following in current_user.following.split(","):
+            user = User.query.filter_by(id=int(usr_following)).first()
+            following.append(user)
+            sub_posts.append(Post.query.filter_by(user_id=user.id).all())
+    except:
+        pass
 
     for sublist in sub_posts:
         for item in sublist:
