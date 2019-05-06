@@ -40,4 +40,4 @@ def edit_post(id):
     elif request.method == "GET":
         form.title.data = post.title
         form.description.data = post.description
-    return render_template("edit_post.html", title="Edit Post", form=form)
+    return render_template("edit_post.html", title="Edit Post", form=form, post=post)

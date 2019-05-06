@@ -97,3 +97,5 @@ P
  app/templates/followinglist.html,e\f\ef1c29731be0d5d5dff4b1614267e109212d59b9
 Q
 !app/templates/search_results.html,4\e\4e23db54d8214b973c8b6ae414fff5509b04ec68
+K
+app/controllers/discover.py,2\d\2d53f59c682dbfe109833ee16183c84ee23ea91d

@@ -4,7 +4,7 @@
 # Filename: forms.py
 # Author: Steve Tautonico
 # Date Created: 4/30/2019
-# Date Last Modified: 5/03/2019
+# Date Last Modified: 5/04/2019
 # Python Version: 3.6 - 3.7
 # =============================================================================
 """The forms that accept inputs from the html"""
@@ -31,7 +31,7 @@ class RegForm(FlaskForm):
     first_name = StringField("First Name", validators=[DataRequired()])
     last_name = StringField("Last Name", validators=[DataRequired()])
     submit = SubmitField("Register")
-    recaptcha = RecaptchaField()
+    # recaptcha = RecaptchaField()
 
     invalid_characters = ["\\", "/", ":", "*", "?", "<", ">", "|", '"', "'", ";", "%"]
 
@@ -101,15 +101,15 @@ class UpdateAccount(FlaskForm):
 
 
 class NewPost(FlaskForm):
-    title = StringField("Title", validators=[DataRequired()])
+    title = StringField("Title", validators=[DataRequired(), Length(min=3, max=60)])
     picture = FileField("Image", validators=[FileAllowed(["jpg", "png", "gif"]), DataRequired()])
-    description = StringField("Description")
+    description = StringField("Description", validators=[Length(max=540)])
     submit = SubmitField("Post")
 
 
 class EditPost(FlaskForm):
-    title = StringField("Title")
-    description = StringField("Description")
+    title = StringField("Title", validators=[Length(min=3, max=60)])
+    description = StringField("Description", validators=[Length(max=540)])
     submit = SubmitField("Edit")
 
 
@@ -118,5 +118,5 @@ class DeletePost(FlaskForm):
 
 
 class SearchAccount(FlaskForm):
-    username = StringField("Username")
+    username = StringField("Username", validators=[Length(min=4)])
     submit = SubmitField("Search")

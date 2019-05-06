@@ -9,6 +9,10 @@
     <div class="form-group mx-auto d-block text-center">
         {{ form.submit(class="btn btn-outline-danger btn-lg") }}
     </div>
+    <!--    Cancel Button-->
+    <div class="form-group mx-auto d-block text-center">
+        <a class="btn btn-outline-warning" href="{{ url_for('account.account', username=current_user.username) }}">Cancel</a>
+    </div>
 </form>
 
 {% endblock content %}
