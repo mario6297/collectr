@@ -8,27 +8,27 @@
 # Python Version: 3.6 - 3.7
 # =============================================================================
 """The initialization file for the main 'app' package"""
-import sentry_sdk
+# import sentry_sdk
 # =============================================================================
 # Imports
 # =============================================================================
-from flask import Flask, abort  # , render_template
+from flask import Flask, abort, render_template
 from flask_bcrypt import Bcrypt
 from flask_login import LoginManager
 from flask_sqlalchemy import SQLAlchemy
 from sentry_sdk.integrations.flask import FlaskIntegration
 
-# from werkzeug.exceptions import HTTPException
+from werkzeug.exceptions import HTTPException
 
 
 __author__ = "Steve Tautonico"
 __contact__ = "stautonico@gmail.com"
 __date__ = "4/30/2019"
 
-sentry_sdk.init(
-    dsn="https://6397f05e69e4465189be1eff4fc71611@sentry.io/1452599",
-    integrations=[FlaskIntegration()]
-)
+# sentry_sdk.init(
+#     dsn="https://6397f05e69e4465189be1eff4fc71611@sentry.io/1452599",
+#     integrations=[FlaskIntegration()]
+# )
 
 app = Flask(__name__)
 app.config["SECRET_KEY"] = '96832c3f32b9a586095cf19384a9cccd1d51c9683f6e2239979d258cb975ba4f'
@@ -85,12 +85,12 @@ app.jinja_env.globals.update(get_user_post=get_user_post)
 app.jinja_env.globals.update(get_user_from_id=get_user_from_id)
 
 
-# @app.errorhandler(Exception)
-# def handle_error(e):
-#     code = 500
-#     if isinstance(e, HTTPException):
-#         code = e.code
-#     return render_template("error.html", code=str(code)), code
+@app.errorhandler(Exception)
+def handle_error(e):
+    code = 500
+    if isinstance(e, HTTPException):
+        code = e.code
+    return render_template("error.html", code=str(code)), code
 
 
 @app.route("/error/<errorcode>", methods=["GET", "POST"])
