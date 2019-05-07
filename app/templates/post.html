@@ -1,8 +1,17 @@
 {% extends "layout.html" %}
 {% block content %}
 <div class="container card p-3">
-    <p><a href="{{ url_for('account.account', username=get_user_post(post).username) }}" class="d-inline-block">{{
-        get_user_post(post).username }}</a> posted on {{ post.date_posted.strftime("%B %d, %Y") }}</p>
+    <p>
+        {% if get_user_post(post).verified %}
+        <a href="{{ url_for('account.account', username=get_user_post(post).username) }}" class="header">{{
+            get_user_post(post).username }} <i class="fas fa-check-circle"
+                                               style="font-size: small; color: #AA93D5;"
+                                               data-toggle="tooltip" title="Verified"></i></a>
+        {% else %}
+        <a href="{{ url_for('account.account', username=get_user_post(post).username) }}" class="header">{{
+            get_user_post(post).username }}</a>
+        {% endif %}
+        posted on {{ post.date_posted.strftime("%B %d, %Y") }}</p>
 
     <div class="card-body">
         <h1 class="text-center" id="post-title">{{ post.title }}</h1>

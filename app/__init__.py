@@ -65,6 +65,7 @@ def register_blueprints(app):
     app.register_blueprint(controllers.following.blueprint_unfollow)
     app.register_blueprint(controllers.search_account.blueprint)
     app.register_blueprint(controllers.following_list.blueprint)
+    app.register_blueprint(controllers.discover.blueprint)
 
 
 register_blueprints(app)

@@ -13,7 +13,7 @@ Controllers separate and handle all information being passed to the HTML templat
 # Imports
 # =============================================================================
 from . import credits, home, login, account, logout, update_account, new_post, post, feed, edit_post, delete_post, \
-    following, search_account, following_list
+    following, search_account, following_list, discover
 
 __author__ = "Steve Tautonico"
 __contact__ = "stautonico@gmail.com"
